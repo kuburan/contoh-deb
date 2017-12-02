@@ -1,0 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/sh
+
+# Uninstall dulu six python module bro.
+pip2 uninstall -y six
+
+# bersih secara paksa folder six.
+rm -fr /data/data/com.termux/files/usr/lib/python2.7/site-packages/six*

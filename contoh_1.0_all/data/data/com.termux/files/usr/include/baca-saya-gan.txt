@@ -1,0 +1,2 @@
+di dalam folder ini biasanya berisi file"2 header.
+semua file nya berekstensi ".h" (tanpa tanda kutip ya).

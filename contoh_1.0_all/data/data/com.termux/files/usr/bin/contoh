@@ -1,0 +1,124 @@
+#!/data/data/com.termux/files/usr/bin/python2
+#
+# -*- coding: utf-8 -*-
+#
+# script dibuat oleh kuburan_0day atau Gembur Ae
+# script ini saya buat sebagai contoh cara membuat .deb file
+#
+# script untuk six python modules nanti akan saya tambahkan ke dalam
+# postinst dan prerm file
+#
+import six
+import re
+import os
+import sys
+import datetime
+import io
+
+# definisi folder /bin
+BIN_FOLDER = '/data/data/com.termux/files/usr/bin'
+
+# periksa apakah file berada tepat dalam folder bin
+if os.path.isfile("%s/contoh" %
+		(BIN_FOLDER)):
+    pass
+
+elif not os.path.isfile("%s/contoh" %
+		(BIN_FOLDER)):
+    sys.stderr.write("maaf gan, file executable salah !!!\n")
+    sys.exit(1)
+
+# definisi folder /share
+SHARE_FOLDER = '/data/data/com.termux/files/usr/share/contoh'
+
+# muat file dari folder default (share)
+sys.path.append("%s/baca-saya-gan.txt" %
+		(SHARE_FOLDER))
+
+# periksa apakah file berada tepat dalam folder share
+if not os.path.isfile("%s/baca-saya-gan.txt" %
+		(SHARE_FOLDER)):
+    sys.stderr.write("kesalahan fatal, file baca-saya-gan.txt tidak ketemu !\n")
+    sys.exit(2)
+
+# definisi folder /src
+SRC_FOLDER = '/data/data/com.termux/files/usr/src'
+
+# definisi core log
+def log(error):
+    try:
+        # buka file hanya jika folder telah ada
+        if not os.path.isfile("%s/contoh.log" %
+				SRC_FOLDER):
+            filewrite = open("%s/contoh.log" %
+				SRC_FOLDER, "w")
+            filewrite.write("")
+            filewrite.close()
+        if os.path.isfile("%s/contoh.log" %
+				SRC_FOLDER):
+            error = str(error)
+            # buka file untuk menulis log
+            filewrite = open("%s/contoh.log" %
+				SRC_FOLDER, "a")
+            # tulis pesan error
+            filewrite.write("ERROR: " + date_time() + ": " + error + "\n")
+            # tutup file
+            filewrite.close()
+    except IOError as err:
+        pass
+
+# definisi sistem operasi
+def check_os():
+    if os.name == "posix":
+        operating_system = "posix"
+    return operating_system
+
+# konfigurasi warna
+if check_os() == "posix":
+    class bcolors:
+        GREEN = '\033[92m'
+        BLUE = '\033[94m'
+        RED = '\033[91m'
+        ENDC = '\033[0m'
+
+def disable(self):
+    self.GREEN = ''
+    self.BLUE = ''
+    self.RED = ''
+    self.ENDC = ''
+
+# definisi waktu
+sekarang = datetime.datetime.now()
+print(bcolors.GREEN + "\nTanggal dan waktu sekarang menggunakan metode string dari objek datetime:" +
+	bcolors.ENDC)
+print
+print(bcolors.BLUE + str(sekarang) +
+	bcolors.ENDC)
+print
+print(bcolors.GREEN + "\nTanggal dan waktu sekarang menggunakan atribut contoh:" +
+	bcolors.ENDC)
+print
+print(bcolors.BLUE + "Tahun: %d" % sekarang.year +
+	bcolors.ENDC)
+print(bcolors.BLUE + "Bulan: %d" % sekarang.month +
+	bcolors.ENDC)
+print(bcolors.BLUE + "Hari: %d" % sekarang.day +
+	bcolors.ENDC)
+print(bcolors.BLUE + "Jam: %d" % sekarang.hour +
+	bcolors.ENDC)
+print(bcolors.BLUE + "Menit: %d" % sekarang.minute +
+	bcolors.ENDC)
+print(bcolors.BLUE + "Detik: %d" % sekarang.second +
+	bcolors.ENDC)
+print(bcolors.BLUE + "Micro Detik: %d" % sekarang.microsecond +
+	bcolors.ENDC)
+print
+print(bcolors.GREEN + "\nTanggal dan waktu sekarang menggunakan strftime:" +
+	bcolors.ENDC)
+print
+print(bcolors.BLUE + sekarang.strftime("%Y-%m-%d %H:%M") +
+	bcolors.ENDC)
+
+# tulis aja ngawur, suka suka !!!!
+print(bcolors.RED + "\nHallo gan ! apa kabar ?" +
+	bcolors.ENDC)

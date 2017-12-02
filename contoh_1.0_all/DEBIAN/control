@@ -1,0 +1,8 @@
+Package: contoh
+Version: 1.0-stable
+Architecture: all
+Homepages: http://www.contoh.com
+Maintainer: Nama ente bro @Terserah
+Depends: python2
+Installed-Size: 100 KB
+Description: keterangan dari tools tersebut.

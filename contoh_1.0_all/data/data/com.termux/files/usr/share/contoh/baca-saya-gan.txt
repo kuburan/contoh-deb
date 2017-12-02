@@ -1,0 +1,3 @@
+di dalam folder ini biasa sebagai home folder dari tools yg akan 
+lu bangun. seperti Ubuntu ataupun Kali, kebanyakan folder share
+digunakan sebagai home dari tools tersebut.

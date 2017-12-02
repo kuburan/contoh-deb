@@ -1,0 +1,2 @@
+di dalam folder ini biasanya berisi file"2 konfiguasi dari tools 
+tersebut. kebanyakan filenya berekstensi ".conf" ataupun ".config"

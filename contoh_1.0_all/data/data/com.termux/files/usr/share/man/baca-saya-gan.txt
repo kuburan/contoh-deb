@@ -1,0 +1,2 @@
+di dalam folder ini biasanya untuk menyimpan file linux manpages.
+sama seperti distro linux pada umumnya.

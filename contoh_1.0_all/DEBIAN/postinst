@@ -1,0 +1,11 @@
+#!/data/data/com.termux/files/usr/bin/sh
+#
+#
+# di check dulu bro pip nya sudah pass atau belom
+echo
+echo "tunggu sebentar bro, sedang menginstall six..."
+
+pip2 install six
+
+echo
+echo "selesai bro,, program telah terinstal dengan baik dan benar"

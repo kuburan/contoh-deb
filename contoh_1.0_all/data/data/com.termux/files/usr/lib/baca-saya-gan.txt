@@ -1,0 +1,4 @@
+di dalam folder ini biasanya berisi file"2 library yg pasti nya 
+dibutuhkan oleh tools tersebut, kebanyakan file nya berekstensi
+( ".so" ".la" ".a" ) .. jangan sampai salah tempat ya, folder ini
+juga sangat penting.
