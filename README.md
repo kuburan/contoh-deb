@@ -8,24 +8,28 @@ ruby, perl, dan lainnya.
 BAGAIMANA CARA MEMBANGUN NYA ?
 
 ini sangat mudah, hanya dengan beberapa langkah saja sudah selesai.
+
 $ git clone https://github.com/kuburan/contoh-deb.git
 $ cd contoh-deb
 $ chmod 775 ./contoh_1.0_all/DEBIAN ./contoh_1.0_all/DEBIAN/*
 $ dpkg-deb --build contoh_1.0_all
 
 ( atau dengan data compressed berekstensi xz )
+
 $ dpkg-deb -v -Z xz -b contoh_1.0_all
 
 selesai !! 
 
 untuk menginstall nya sangat mudah, sekali ENTER langsung selesai.
+
 $ apt-get install -y ./contoh_1.0_all.deb
 $ contoh
 $ apt show contoh
 
 untuk uninstall ketik perintah berikut :
+
 $ apt-get remove contoh
-atau
+atau bisa juga
 $ apt-get purge contoh
 
 
