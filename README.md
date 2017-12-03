@@ -28,10 +28,10 @@ $ apt show contoh
 
 untuk uninstall ketik perintah berikut :
 
-$ apt-get remove contoh
-atau bisa juga
+$ apt-get remove contoh                       
+atau bisa juga                             
 $ apt-get purge contoh
-
+         
 
 NOTE :
 
